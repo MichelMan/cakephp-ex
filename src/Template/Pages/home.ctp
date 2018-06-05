@@ -132,6 +132,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="columns large-6">
         <h4>Database</h4>
         <?php
+		echo 'USER BD: ' . env("DATABASE_USER", '');
         try {
             $connection = ConnectionManager::get('default');
             $connected = $connection->connect();
