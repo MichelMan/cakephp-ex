@@ -132,8 +132,15 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="columns large-6">
         <h4>Database</h4>
         <?php
-		echo 'USER BD: ' . env("DATABASE_USER", '');
-        try {
+		echo 'USER BD: ' . env("DATABASE_USER", '') . '<br>';
+		echo 'DATABASE_PASSWORD BD: ' . env("DATABASE_PASSWORD", ''). '<br>';
+		echo 'DATABASE_NAME BD: ' . env("DATABASE_NAME", ''). '<br>';
+		echo 'PORT BD: ' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_PORT", ''). '<br>';
+		echo 'HOST BD: ' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_HOST", ''). '<br>';
+		echo 'DRIVER BD: Cake\Database\Driver\\' . ucfirst(env('DATABASE_ENGINE', 'Mysql')). '<br>';
+		echo 'DATABASE URL BD: ' . env('DATABASE_URL', null) . '<br>';
+        
+		try {
             $connection = ConnectionManager::get('default');
             $connected = $connection->connect();
         } catch (Exception $connectionError) {
