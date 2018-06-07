@@ -132,19 +132,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="columns large-6">
         <h4>Database</h4>
         <?php
-		echo 'USER BD: ' . env("DATABASE_USER", '') . '<br>';
-		echo 'DATABASE_PASSWORD BD: ' . env("DATABASE_PASSWORD", ''). '<br>';
-		echo 'DATABASE_NAME BD: ' . env("DATABASE_NAME", ''). '<br>';
-		echo 'MYSQL_SERVICE_NAME: ' . env("DATABASE_SERVICE_NAME", ''). '<br>';
-		echo 'PORT BD 1: ' . getenv(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_PORT", ''). '<br>';
-		echo 'PORT BD 2: ' . env("MYSQL_SERVICE_PORT", ''). '<br>';
-		echo 'PORT BD 3: ' . env("MYSQL-CAKEPHP_SERVICE_PORT", ''). '<br>';
-		echo 'HOST BD 1: ' . getenv(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_HOST", ''). '<br>';
-		echo 'HOST BD 2: ' . env("MYSQL_SERVICE_HOST", ''). '<br>';
-		echo 'HOST BD 3: ' . env("MYSQL-CAKEPHP_SERVICE_HOST", ''). '<br>';
-		echo 'DRIVER BD: Cake\Database\Driver\\' . ucfirst(env('DATABASE_ENGINE', 'Mysql')). '<br>';
-		echo 'DATABASE URL BD: ' . env('DATABASE_URL', null) . '<br>';
-        
+		echo 'INFO DATABASE_USER BD: ' . env("DATABASE_USER", '') . '<br>';
+		echo 'INFO DATABASE_NAME BD: ' . env("DATABASE_NAME", ''). '<br><br>';
+			
 		try {
             $connection = ConnectionManager::get('default');
             $connected = $connection->connect();
