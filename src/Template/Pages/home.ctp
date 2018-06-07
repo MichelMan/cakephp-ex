@@ -135,8 +135,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		echo 'USER BD: ' . env("DATABASE_USER", '') . '<br>';
 		echo 'DATABASE_PASSWORD BD: ' . env("DATABASE_PASSWORD", ''). '<br>';
 		echo 'DATABASE_NAME BD: ' . env("DATABASE_NAME", ''). '<br>';
-		echo 'PORT BD: ' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_PORT", ''). '<br>';
-		echo 'HOST BD: ' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_HOST", ''). '<br>';
+		echo 'PORT BD 1: ' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_PORT", ''). '<br>';
+		echo 'PORT BD 2: ' . env("DATABASE_SERVICE_PORT", ''). '<br>';
+		echo 'HOST BD: 1' . env(strtoupper(env("DATABASE_SERVICE_NAME", 'Mysql'))."_SERVICE_HOST", ''). '<br>';
+		echo 'HOST BD: 2' . env("DATABASE_SERVICE_HOST", ''). '<br>';
 		echo 'DRIVER BD: Cake\Database\Driver\\' . ucfirst(env('DATABASE_ENGINE', 'Mysql')). '<br>';
 		echo 'DATABASE URL BD: ' . env('DATABASE_URL', null) . '<br>';
         
